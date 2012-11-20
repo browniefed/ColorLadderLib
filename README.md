@@ -17,7 +17,8 @@ Get a list of all brightnes / darkness at any interval
 ```
 
 Pretty straight forward, library created for Color Step Ladder project
------------------------------------------
+
 TODO:
+-----------------------------------------
 Cleaner code to come, more DRY needed so there is less checking of format, and which function to call. Just a library of functions, build a string, and it'll call the proper function
 Also need to improve regular expressions, currently RGB accepts values above 255, HSL accepts any 3 digit values, and also does not accept decimals
