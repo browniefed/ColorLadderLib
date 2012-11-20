@@ -4,7 +4,7 @@ Easily convert between HEX/HSL/RGB
 Get any level of brightness / darkness
 Get a list of all brightnes / darkness at any interval
 
-``javascript
+```javascript
 	var ColorStepper = new ColorStepLadder('#333');
 
 	var hsl333 =  ColorStepper.color('hsl');
@@ -14,7 +14,7 @@ Get a list of all brightnes / darkness at any interval
 	//format: What format to return the values in (default: 'hex')
 	//include: Include the input color even if it doesn't fall with in the step interval (default: true)
 	var allTheColors = ColorStepper.list({step: 2, format: 'hex', include: true});
-``
+```
 
 Pretty straight forward, library created for Color Step Ladder project
 TODO:
