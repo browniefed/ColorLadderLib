@@ -18,16 +18,15 @@
 		
 		</ul>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-		<script src="js/colorificsteppermabob.js"></script>
+		<script src="js/colorladder.js"></script>
 		<script type="text/javascript">
-
-			var ColorStepper = new ColorStepLadder('#333333'),
-			hsl = ColorStepper.color('hsl'),
-			rgb = ColorStepper.color('rgb'),
-			hex = ColorStepper.color('hex'),
-			brightness = ColorStepper.brightness(80,'hex');
-
-			var list = ColorStepper.list({step: 2});
+			var ColorStepper = ColorLadder.Convert('#333333'),
+			hsl = ColorStepper.toHSL(),
+			rgb = ColorStepper.toRGB(),
+			hex = ColorStepper.toHEX(),
+			brightness = ColorStepper.Brightness(80,'hex');
+						
+			var list = ColorStepper.List({step: 2});
 
 			var $steps = $('#steps'),
 				$colorvals = $("#colorvals"),
