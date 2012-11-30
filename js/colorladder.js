@@ -124,7 +124,6 @@ var ColorLadder = ColorLadder || {};
 	}
 
 	ColorLadder.Convert.Validate = function(color) {
-		console.log(color);
 		if (typeof color === 'undefined') {
 			return false;
 		}
