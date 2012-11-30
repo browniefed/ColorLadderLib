@@ -27,13 +27,12 @@ var ColorLadder = ColorLadder || {};
 			rgb: _hsltorgb
 		}
 	};
-
 	
 
 	ColorLadder.Convert = function(color, to) {
 		var self = this;
 		if (typeof(color) === 'undefined' && typeof(to) === 'undefined') {
-			return self;
+			return self.Convert;
 		}
 		if (typeof(to) === 'undefined') {
 			to = 'HEX';
@@ -42,7 +41,11 @@ var ColorLadder = ColorLadder || {};
 		var _colors = validate(color);
 		if (_colors !== false) {
 			ColorLadder._colors = parseColors(_colors);
+			ColorLadder._isValid = true;
 			return self.Convert;
+		} else {
+			ColorLadder._isValid = false;
+			return false;
 		}
 	};
 
@@ -118,6 +121,14 @@ var ColorLadder = ColorLadder || {};
 	    } else if (format === 'hsl') {
 	    	return _output(newColor,'hsl');
 	    }
+	}
+
+	ColorLadder.Convert.Validate = function(color) {
+		console.log(color);
+		if (typeof color === 'undefined') {
+			return false;
+		}
+		return validate(color);
 	}
 
 	function validate(color) {
